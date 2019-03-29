@@ -98,18 +98,20 @@ void outputFile(int &m,int &n,std::vector<std::string> &peta,koor &a,koor &b,pPa
     int x,y,temp;
     x=parent[b.x][b.y].first;
     y=parent[b.x][b.y].second;
-    while ((x!=a.x)||(y!=a.y)){
-        peta[x][y]= '!';
-        temp=x;
-        x=parent[x][y].first;
-        y=parent[temp][y].second;
-    }
-    for (int i=0;i<m;i++){
-        for (int j=0;j<n;j++){
-            out<<peta[i][j];
-        }
-        out<<'\n';
-    }
+    if ((x==b.x) && (y==b.y)){
+    	out<<"Tidak ada jalan yang bisa dilewati\n";
+	}
+	else{
+		while ((x!=a.x)||(y!=a.y)){
+        	peta[x][y]= '!';
+        	temp=x;
+        	x=parent[x][y].first;
+        	y=parent[temp][y].second;
+    	}
+    	for (int i=0;i<m;i++){
+        	out<<peta[i]<<'\n';
+    	}
+	}
 }
 bool isValid(koor a,std::pair<int,int> p,int m,int n,int &x,int &y){
     if ((a.x+p.first>=0)&&(a.x+p.first<m)&&
