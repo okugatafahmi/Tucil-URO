@@ -91,7 +91,10 @@ void inputManual(int &m,int &n,std::vector<std::string> &peta,koor &a,koor &b,pP
 }
 
 void outputFile(int &m,int &n,std::vector<std::string> &peta,koor &a,koor &b,pPath &parent) {
-    std::ofstream out ("/Users/mirzaalarsyad/Desktop/mirza/mirza/output.txt");
+	string s;
+	std::cout<<"Nama file yang ingin disimpan: ";
+	std::cin>>s;
+	std::ofstream out (s);
     int x,y,temp;
     x=parent[b.x][b.y].first;
     y=parent[b.x][b.y].second;
