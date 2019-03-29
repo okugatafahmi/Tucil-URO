@@ -91,7 +91,7 @@ void inputManual(int &m,int &n,std::vector<std::string> &peta,koor &a,koor &b,pP
 }
 
 void outputFile(int &m,int &n,std::vector<std::string> &peta,koor &a,koor &b,pPath &parent) {
-	string s;
+	std::string s;
 	std::cout<<"Nama file yang ingin disimpan: ";
 	std::cin>>s;
 	std::ofstream out (s);
@@ -146,7 +146,7 @@ void aStar(int &m,int &n,std::vector<std::string> &peta,koor &awal,koor &akhir,p
     while ((!q.empty()) && (!temu)){
         now=q.top();
         q.pop();
-        std::cout<<now.x<<' '<<now.y<<'\n';
+        //std::cout<<now.x<<' '<<now.y<<'\n';
         if ((now.x==akhir.x) && (now.y==akhir.y)){
             temu=true;
         }
