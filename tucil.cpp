@@ -197,14 +197,18 @@ int main(){
     
     aStar(m,n,peta,awal,akhir,parent);
     outputFile(m,n,peta,awal,akhir,parent);
-    for (int i=0;i<m;i++){
+    /*
+     Looping untuk menampilkan path robot ke layar terminal
+     
+     for (int i=0;i<m;i++){
         for (int j=0;j<n;j++){
             std::cout<<peta[i][j];
         }
         std::cout<<'\n';
     }
-    std::cout<<awal.x<<' '<<awal.y<<'\n';
-    std::cout<<akhir.x<<' '<<akhir.y<<'\n';
+     std::cout<<awal.x<<' '<<awal.y<<'\n'; {koordinat awal dari robot}
+     std::cout<<akhir.x<<' '<<akhir.y<<'\n'; {koordinat akhir dari robot}
+     */
     
 }
 
