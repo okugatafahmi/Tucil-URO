@@ -141,6 +141,7 @@ void aStar(int &m,int &n,std::vector<std::string> &peta,koor &awal,koor &akhir,p
     std::pair<int,int> w[4]={ {0,1},{1,0},{0,-1},{-1,0}};
     koor now,temp;
     q.push(awal);
+    sudah[awal.x][awal.y]=true;
     int x,y;
     bool temu=false;
     while ((!q.empty()) && (!temu)){
